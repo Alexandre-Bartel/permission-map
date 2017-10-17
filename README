@@ -15,5 +15,18 @@ in the following research papers:
  Automated Software Engineering (ASE), Essen, Germany, 2012 
 
 Dependencies:
+
 1) COPES relies on Soot:  https://github.com/Sable/soot
 
+How to compile?
+
+1) Import COPES in eclipse
+2) Import Soot and all its dependencies
+3) Eclipse should compile COPES in ./bin/
+
+How to use?
+
+Use the following scripts:
+./redirectAndroidRemoteCalls/run.sh
+./entryPointWrapper/runGenerateClassWrappersWithSoot.sh
+./findPermissionChecks/runFindPermissionChecks.sh
