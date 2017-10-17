@@ -1,3 +1,5 @@
+# COPES
+
 This repository contains COPES (COllect PErmissionS), a tool to extract
 permission checks from the Android Framework.
 
@@ -14,17 +16,17 @@ in the following research papers:
  Surface: An Application to Android, in IEEE/ACM International Conference on
  Automated Software Engineering (ASE), Essen, Germany, 2012 
 
-** Dependencies **
+# Dependencies
 
-1) COPES relies on Soot:  https://github.com/Sable/soot
+COPES relies on Soot:  [https://github.com/Sable/soot]
 
-** How to compile? **
+# How to compile?
 
-1) Import COPES in eclipse
-2) Import Soot and all its dependencies
-3) Eclipse should compile COPES in ./bin/
+1. Import COPES in eclipse
+2. Import Soot and all its dependencies
+3. Eclipse should compile COPES in ./bin/
 
-** How to use? **
+# How to use? 
 
 Use the following scripts:
 ./redirectAndroidRemoteCalls/run.sh
