@@ -6,9 +6,9 @@ permission checks from the Android Framework.
 This tool has initialiy been developed for the experiments in the following
 research papers:
 
-- Alexandre Bartel, Jacques Klein, Martin Monperrus, Yves Le Traon: Static
+- Alexandre Bartel, Jacques Klein, Martin Monperrus, Yves Le Traon: [Static
  Analysis for Extracting Permission Checks of a Large Scale Framework: The
- Challenges And Solutions for Analyzing Android, in IEEE Transactions of
+ Challenges And Solutions for Analyzing Android](https://orbilu.uni.lu/bitstream/10993/20036/1/TSE_Alex_2014%20%281%29.pdf), in IEEE Transactions of
  Software Engineering (TSE), 2014
 
 - Alexandre Bartel, Jacques Klein, Martin Monperrus, Yves Le Traon:
