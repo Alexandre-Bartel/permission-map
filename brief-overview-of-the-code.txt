@@ -1,0 +1,17 @@
+As in the script run-spark.sh, COPES has 5 steps:
+
+- step 1: modify the bytecode to directly connect to system services (not going through the binder)
+This is to avoid the problem illustrated in Fig.5 in the TSE paper.
+[package 'lu.uni.rrc']
+
+- step2: list all methods from the Android API -> this gives a starting point to generate the entry point wrappers
+[bash]
+
+- step3: generate the wrappers for the entry points, with the main class.
+[package 'lu.uni.epw']
+
+- step4: compile the wrapper classes (Soot handles better bytecode than source code)
+[bash]
+
+- step5: generating call-graph from the wrappers and extracting permissions
+[package 'lu.uni.fpc']

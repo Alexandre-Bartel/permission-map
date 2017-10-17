@@ -1,0 +1,31 @@
+
+0) Prerequisites
+
+cp ant.settings.template ant.settings
+configure ant.settings
+
+1) Build
+
+$ ant 
+
+2) Run tests
+
+$ ant runtests
+
+3) Configure
+
+Let say the target library you would like to generate wrappers for is in
+/target/library/.  You must create a configuration file in
+/target/library/config.cfg which specifies which classes must be analyzed.
+Example of config.cfg:
+
+# start
+android.
+com.android.
+a.b.MyClass
+# end
+
+3) Run
+
+$ ./runGenerateClassWrappersWithSoot.sh -t /target/library/ -o /output/dir/
+

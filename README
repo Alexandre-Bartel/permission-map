@@ -1,0 +1,19 @@
+This is COPES (COllect PErmissionS), a tool to extract permission checks from
+the Android Framework.
+
+This tool has initialiy been developed by Alexandre Bartel for the experiments
+in the following research papers:
+
+ Alexandre Bartel, Jacques Klein, Martin Monperrus, Yves Le Traon: Static
+ Analysis for Extracting Permission Checks of a Large Scale Framework: The
+ Challenges And Solutions for Analyzing Android, in IEEE Transactions of
+ Software Engineering (TSE), 2014
+
+ Alexandre Bartel, Jacques Klein, Martin Monperrus, Yves Le Traon:
+ Automatically Securing Permission-Based Software by Reducing the Attack
+ Surface: An Application to Android, in IEEE/ACM International Conference on
+ Automated Software Engineering (ASE), Essen, Germany, 2012 
+
+Dependencies:
+1) COPES relies on Soot:  https://github.com/Sable/soot
+

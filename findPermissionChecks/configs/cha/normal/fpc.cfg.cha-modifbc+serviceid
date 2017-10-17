@@ -1,0 +1,35 @@
+##
+## Find Permission Checks Configuration File                                                                                                                                        
+##
+
+#########################
+# General options
+#########################
+
+SKIP_INVERSE_IDENTITY=false
+# Set this option to true if you want to generate a comma separated values
+# graph of the call graph. This CSV can be read by gephi for instance
+# https://gephi.org/
+OUTPUT_GRAPH=false
+# By default one file containing the whole call graph is output. If you would
+# like multiple graphs with multiple max depths set this option to a positive
+# integer value V. A graph for each max depths 1,2,...,V is output.
+OUTPUT_GRAPH_MAX_DEPTH=-1
+# Log levels: all, trace, debug, info, warn, error, fatal, off
+LOG_LEVEL=info
+# Skip classes ending with $Stub and $Stub$Proxy
+SKIP_STUB_AND_PROXY=false
+# Print live call graph
+PRINT_LIVE_CALL_GRAPH=false
+
+#########################
+## Spark specific options
+#########################
+
+# Minimum depth in the call graph where to start the timeout
+TIMEOUT_DEPTH=2
+# Timeout in seconds. 
+# The timeout restarts for every element  at deth 2. If the 
+# timeout expires for one element at depth  2, the next element 
+# at depth 2 is analyzed.
+TIMEOUT_TIME=20

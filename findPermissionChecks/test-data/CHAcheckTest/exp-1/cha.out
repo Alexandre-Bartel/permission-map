@@ -1,0 +1,287 @@
+Using CHA
+java classpath: /home/alex/prog/soot_findPermissionChecks/lib/Soot_findPermissionChecks.jar:/home/alex/prog/soot_findPermissionChecks/libs/soot.jar:/home/alex/prog/soot_findPermissionChecks/libs/AXMLPrinter2.jar:tmptest/ep-1/:
+soot command  : lu.uni.fpc.CHAFindPermissionChecks -keep tmptest/ep-1//keep.cfg -skip tmptest/ep-1//skip.cfg -cfg fpc.cfg.template -soot-class-path tmptest/ep-1/:/home/alex/prog/soot_findPermissionChecks/../entryPointWrapper-testLib/lib/EntryPointWrapper-testLib.jar:tmptest/bytecode-1/:/home/alex/experiments/permissionMap/system-platform/android-4.0.1_r1.jar: -d tmptest/exp-1/ -f n -w -i android. -i com.android. -allow-phantom-refs -full-resolver -main-class MainClass -process-dir tmptest/ep-1/
+[filter-spark] add methods from tmptest/ep-1/skip.cfg
+Soot started on Fri Dec 14 08:10:27 CET 2012
+Warning: java.lang.NoClassDefFoundError is a phantom class!
+Warning: java.lang.StringBuffer is a phantom class!
+Warning: java.lang.Boolean is a phantom class!
+Warning: java.lang.Long is a phantom class!
+Warning: java.lang.Integer is a phantom class!
+Warning: java.lang.Short is a phantom class!
+Warning: java.lang.Float is a phantom class!
+Warning: java.lang.Double is a phantom class!
+Warning: java.lang.Throwable is a phantom class!
+Warning: java.lang.Class is a phantom class!
+Warning: java.lang.Character is a phantom class!
+Warning: java.lang.AssertionError is a phantom class!
+Warning: java.lang.Byte is a phantom class!
+Warning: java.lang.Void is a phantom class!
+Warning: java.lang.ClassFormatError is a phantom class!
+Warning: java.lang.InstantiationError is a phantom class!
+Warning: java.lang.Runnable is a phantom class!
+Warning: java.lang.ref.Finalizer is a phantom class!
+Warning: java.lang.IncompatibleClassChangeError is a phantom class!
+Warning: java.lang.NoSuchFieldError is a phantom class!
+Warning: java.lang.StackOverflowError is a phantom class!
+Warning: java.lang.Thread is a phantom class!
+Warning: java.lang.IllegalAccessError is a phantom class!
+Warning: java.lang.ArrayStoreException is a phantom class!
+Warning: java.lang.NoSuchMethodError is a phantom class!
+Warning: java.lang.ExceptionInInitializerError is a phantom class!
+Warning: java.lang.LinkageError is a phantom class!
+Warning: java.lang.InternalError is a phantom class!
+Warning: java.lang.VerifyError is a phantom class!
+Warning: java.io.Serializable is a phantom class!
+Warning: java.lang.ArrayIndexOutOfBoundsException is a phantom class!
+Warning: java.lang.ClassCastException is a phantom class!
+Warning: java.lang.ArithmeticException is a phantom class!
+Warning: java.lang.IndexOutOfBoundsException is a phantom class!
+Warning: java.lang.AbstractMethodError is a phantom class!
+Warning: java.lang.Object is a phantom class!
+Warning: java.lang.ThreadDeath is a phantom class!
+Warning: java.lang.String is a phantom class!
+Warning: java.lang.UnknownError is a phantom class!
+Warning: java.lang.ClassCircularityError is a phantom class!
+Warning: java.lang.Cloneable is a phantom class!
+Warning: java.lang.NegativeArraySizeException is a phantom class!
+Warning: java.lang.UnsatisfiedLinkError is a phantom class!
+Warning: java.lang.Error is a phantom class!
+Warning: java.lang.OutOfMemoryError is a phantom class!
+Warning: java.lang.IllegalMonitorStateException is a phantom class!
+Warning: java.lang.RuntimeException is a phantom class!
+Warning: java.lang.NullPointerException is a phantom class!
+Warning: java.lang.ClassNotFoundException is a phantom class!
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[BEFORE] entry point: 
+ entry point: <MainClass: void main(java.lang.String[])>
+[AFTER] entry point: 
+ entry point: <MainClass: void main(java.lang.String[])>
+
+*******************
+[I] Call graph with CHA
+*******************
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+CHA has run for 2
+start CG...
+4 | 0> <MainClass: void main(java.lang.String[])>
+4 |  1> <Wrapper_test_Ep3: void testep3()>
+5 |   2> <android.test.Ep3: void <init>()>
+printm2ps: <android.test.Ep3: void <init>()>
+5 |   2> <android.test.Ep3: void startep2()>
+5 |    3> <android.test.C: void <init>()>
+6 |    3> <android.test.C: void m_3_5()>
+6 |     4> <android.test.C: void m_4_3()>
+6 |      5> <android.test.C: void check_p5()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P5"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+     5> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+12 |     4> <android.test.C: void check_p6()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P6"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+    4> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+13 |    3> <android.test.C: void m_3_4()>
+13 |     4> ALREADY COMPUTED<android.test.C: void check_p5()>
+[FFF] "android.permission.P5"
+13 |    3> <android.test.C: void m_3_3()>
+13 |     4> <android.test.C: void check_p2()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P2"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+    4> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+14 |     4> <android.test.C: void check_p7()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P7"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+    4> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+14 |    3> <android.test.C: void m_3_2()>
+15 |     4> <android.test.C: void m_4_1()>
+15 |      5> <android.test.C: void check_p4()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P4"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+     5> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+15 |      5> <android.test.C: void check_p3()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P3"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+     5> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+16 |     4> <android.test.C: void m_4_2()>
+16 |     4> ALREADY COMPUTED<android.test.C: void check_p2()>
+[FFF] "android.permission.P2"
+printm2ps: <android.test.Ep3: void startep2()>
+  "android.permission.P2"
+  "android.permission.P6"
+  "android.permission.P7"
+  "android.permission.P5"
+  "android.permission.P4"
+  "android.permission.P3"
+printm2ps: <android.test.C: void check_p2()>
+  "android.permission.P2"
+printm2ps: <android.test.C: void m_4_1()>
+  "android.permission.P4"
+  "android.permission.P3"
+printm2ps: <android.test.C: void check_p7()>
+  "android.permission.P7"
+printm2ps: <android.test.C: void m_4_2()>
+printm2ps: <android.test.C: void m_3_4()>
+  "android.permission.P5"
+printm2ps: <android.test.C: void m_4_3()>
+  "android.permission.P5"
+printm2ps: <android.test.C: void check_p6()>
+  "android.permission.P6"
+printm2ps: <android.test.C: void check_p3()>
+  "android.permission.P3"
+printm2ps: <android.test.C: void m_3_5()>
+  "android.permission.P6"
+  "android.permission.P5"
+printm2ps: <android.test.C: void check_p4()>
+  "android.permission.P4"
+printm2ps: <android.test.C: void m_3_2()>
+  "android.permission.P2"
+  "android.permission.P4"
+  "android.permission.P3"
+printm2ps: <android.test.Ep3: void <init>()>
+printm2ps: <android.test.C: void check_p5()>
+  "android.permission.P5"
+printm2ps: <android.test.C: void m_3_3()>
+  "android.permission.P2"
+  "android.permission.P7"
+printm2ps: <android.test.C: void <init>()>
+17 |   2> <android.test.Ep3: void startep1()>
+17 |    3> ALREADY COMPUTED<android.test.C: void <init>()>
+17 |    3> ALREADY COMPUTED<android.test.C: void m_3_4()>
+[FFF] "android.permission.P5"
+18 |    3> ALREADY COMPUTED<android.test.C: void m_3_3()>
+[FFF] "android.permission.P2"
+[FFF] "android.permission.P7"
+18 |    3> ALREADY COMPUTED<android.test.C: void m_3_2()>
+[FFF] "android.permission.P2"
+[FFF] "android.permission.P4"
+[FFF] "android.permission.P3"
+18 |    3> <android.test.C: void m_3_1()>
+18 |     4> <android.test.C: void check_p1()>
+[I] target method 'checkPermission' found!
+[F] "android.permission.P1"
+[I] analyzing method call '<android.content.Context: boolean checkPermission(java.lang.String)>' param: ''
+[I] paramInitUnit: null
+    4> <android.content.Context: boolean checkPermission(java.lang.String)> has permissions: stopping here
+CG has run for 17
+Call graph generation ended.
+
+<Wrapper_test_Ep3: void testep3()>: 
+<android.test.Ep3: void startep2()>: "android.permission.P2", "android.permission.P6", "android.permission.P7", "android.permission.P5", "android.permission.P4", "android.permission.P3", 
+<android.test.C: void check_p2()>: "android.permission.P2", 
+<android.test.C: void m_4_1()>: "android.permission.P4", "android.permission.P3", 
+<android.test.C: void check_p7()>: "android.permission.P7", 
+<android.test.C: void m_4_2()>: 
+<android.test.Ep3: void startep1()>: "android.permission.P2", "android.permission.P7", "android.permission.P1", "android.permission.P5", "android.permission.P4", "android.permission.P3", 
+<android.test.C: void m_3_4()>: "android.permission.P5", 
+<android.test.C: void check_p1()>: "android.permission.P1", 
+<android.test.C: void m_4_3()>: "android.permission.P5", 
+<android.test.C: void check_p6()>: "android.permission.P6", 
+<android.test.C: void m_3_1()>: "android.permission.P1", 
+<android.test.C: void check_p3()>: "android.permission.P3", 
+<android.test.C: void m_3_5()>: "android.permission.P6", "android.permission.P5", 
+<android.test.C: void check_p4()>: "android.permission.P4", 
+<MainClass: void main(java.lang.String[])>: 
+<android.test.C: void m_3_2()>: "android.permission.P2", "android.permission.P4", "android.permission.P3", 
+<android.test.Ep3: void <init>()>: 
+<android.test.C: void check_p5()>: "android.permission.P5", 
+<android.test.C: void m_3_3()>: "android.permission.P2", "android.permission.P7", 
+<android.test.C: void <init>()>: 
+
+nbr of methods for each permission set size:
+with 0 permissions: 5
+with 1 permissions: 10
+with 2 permissions: 3
+with 3 permissions: 1
+with 6 permissions: 2
+
+Methods for each permission set size:
+with 0 permissions: 
+   <Wrapper_test_Ep3: void testep3()> 
+
+   <MainClass: void main(java.lang.String[])> 
+
+   <android.test.Ep3: void <init>()> 
+
+   <android.test.C: void m_4_2()> 
+
+   <android.test.C: void <init>()> 
+
+with 1 permissions: 
+   <android.test.C: void check_p6()> 
+      "android.permission.P6"
+
+   <android.test.C: void check_p2()> 
+      "android.permission.P2"
+
+   <android.test.C: void m_3_1()> 
+      "android.permission.P1"
+
+   <android.test.C: void check_p3()> 
+      "android.permission.P3"
+
+   <android.test.C: void check_p4()> 
+      "android.permission.P4"
+
+   <android.test.C: void check_p7()> 
+      "android.permission.P7"
+
+   <android.test.C: void check_p5()> 
+      "android.permission.P5"
+
+   <android.test.C: void m_3_4()> 
+      "android.permission.P5"
+
+   <android.test.C: void m_4_3()> 
+      "android.permission.P5"
+
+   <android.test.C: void check_p1()> 
+      "android.permission.P1"
+
+with 2 permissions: 
+   <android.test.C: void m_3_5()> 
+      "android.permission.P5"
+      "android.permission.P6"
+
+   <android.test.C: void m_4_1()> 
+      "android.permission.P3"
+      "android.permission.P4"
+
+   <android.test.C: void m_3_3()> 
+      "android.permission.P2"
+      "android.permission.P7"
+
+with 3 permissions: 
+   <android.test.C: void m_3_2()> 
+      "android.permission.P2"
+      "android.permission.P3"
+      "android.permission.P4"
+
+with 6 permissions: 
+   <android.test.Ep3: void startep2()> 
+      "android.permission.P2"
+      "android.permission.P3"
+      "android.permission.P4"
+      "android.permission.P5"
+      "android.permission.P6"
+      "android.permission.P7"
+
+   <android.test.Ep3: void startep1()> 
+      "android.permission.P1"
+      "android.permission.P2"
+      "android.permission.P3"
+      "android.permission.P4"
+      "android.permission.P5"
+      "android.permission.P7"
+
